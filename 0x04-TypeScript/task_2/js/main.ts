@@ -75,14 +75,11 @@ function executeWork(employee: Director | Teacher): string {
   }
 }
 
-type Subjects = {
-  Math: string;
-  History: string;
-};
+type Subjects = "Math" | "History";
 
 function teachClass(todayClass: Subjects) {
-  if (todayClass.Math === "Math") console.log("Teaching Math");
-  if (todayClass.History === "History") console.log("Teaching History");
+  if (todayClass === "Math") console.log("Teaching Math");
+  if (todayClass === "History") console.log("Teaching History");
 }
 
 const emp1 = createEmployee("$200");
@@ -96,5 +93,5 @@ console.log(emp3);
 console.log(executeWork(createEmployee(200)));
 console.log(executeWork(createEmployee(1000)));
 
-teachClass({ Math: "Math", History: "" });
-teachClass({ Math: "", History: "History" });
+teachClass("Math");
+teachClass("History");
