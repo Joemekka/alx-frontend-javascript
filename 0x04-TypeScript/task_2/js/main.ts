@@ -69,14 +69,14 @@ function executeWork(employee: Director | Teacher): string {
   }
 }
 
-/* type Subjects = {
+type Subjects = {
   Math: string;
   History: string;
-}; */
+};
 
-function teachClass(todayClass: string) {
-  if (todayClass === "Math") console.log("Teaching Math");
-  if (todayClass === "History") console.log("Teaching History");
+function teachClass(todayClass: Subjects) {
+  if (todayClass.Math === "Math") console.log("Teaching Math");
+  if (todayClass.History === "History") console.log("Teaching History");
 }
 
 const emp1 = createEmployee("$200");
