@@ -50,11 +50,11 @@ const directorSalary = new Director(500);
 let convertToNumber: number;
 const dirctorAverageSalary = 500;
 
-function createEmployee(salary: number | string): Director | Teacher {
-  if (typeof salary === "number" && salary < 500) {
-    return new Teacher(salary);
+function createEmployee(salary: number | string) {
+  if (salary < 500) {
+    return new Teacher();
   } else {
-    return new Director(500);
+    return new Director();
   }
 }
 function isDirector(employee: Director | Teacher): employee is Director {
